@@ -17,10 +17,31 @@ app.use(express.static(path.resolve(__dirname, '../client/build')))
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'))
 })
+
 app.get('/api', (req, res) => {
     // do something when client requests this route
     // send message back to client
     res.json({message: "Yo yo from the server!"});
+})
+
+app.get('/links', (req, res) => {
+
+})
+
+app.get('/links/:id', (req, res) => {
+
+})
+
+app.post('links/:id', (req, res) => {
+
+})
+
+app.put('links/:id', (req, res) => {
+
+})
+
+app.delete('/links/:id', (req, res) => {
+    
 })
 
 // start app at PORT
